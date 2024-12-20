@@ -1,0 +1,9 @@
+extends layout 
+block content 
+  h2 Persons 
+    p There are #{persons.length} persons waiting.
+
+    ol 
+      each person in persons 
+        li 
+          a (href=`/persons/${person.id}`) #{person.name}

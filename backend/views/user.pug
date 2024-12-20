@@ -1,0 +1,12 @@
+extends layout 
+block content 
+  h2 User Detail 
+  p #{user.name}
+
+  h3 Text History 
+  if user.texts.length 
+    ol 
+      each texts in user.texts 
+        li From #{text.list}
+  else 
+    p No texts
